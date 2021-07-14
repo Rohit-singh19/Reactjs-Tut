@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    min-width: 100%;
+    min-height: 60vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header h1{
+    font-size: 4rem;
+}
+
+.header h1 span{
+    color: white;
+}
+
+.header h3{
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+
+.btns{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    padding: 1.2rem 2rem;
+    font-size: 1.5rem;
+    margin: auto;
+    background-color: skyblue;
+    border: none;
+    transition: 1s;
+}
+
+.button:hover{
+    color: skyblue;
+    background-color: black;
+}
+
+.counter{
+    background: radial-gradient(rgb(228, 170, 170), #f34245);
+    min-width: 100%;
+    min-height: 50vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.counter h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.counter h3{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.counter h3 span{
+    display: block;
+    font-size: 8rem;
+    color: aqua;
+    margin-top: 5rem;
+}
+
+button{
+    padding: 1.2rem 2rem;
+    background-color: aqua;
+    border: none;
+    display: inline-block;
+    margin: auto;
+    transition: .5s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    color: aqua;
+}
