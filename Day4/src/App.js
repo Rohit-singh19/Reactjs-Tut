@@ -11,19 +11,15 @@ import "./style.css"
 
 const tictacArray = new Array(9).fill("");
 
-const chooseOption = () =>{
-
-}
-
 const App = () => {
     let [isCross, setIsCross] = useState(true);
     let [winMessage, setWinMessage] = useState("");
-
-
+    let i = 0;
+    
     const playAgain = () =>{
         tictacArray.fill("");
         setWinMessage("");
-        // askChoice();
+        document.querySelector('.cboard').style.display ="block"
     }
 
     const winner = () =>{
@@ -51,9 +47,7 @@ const App = () => {
         else if(tictacArray[0]== tictacArray[4] && tictacArray[0]==tictacArray[8] && tictacArray[0]){
             setWinMessage(tictacArray[0]+" has won");
         }
-        
     }
-    let i = 0;
 
     const changeTurn = (index) =>{
         if (winMessage) {
@@ -67,25 +61,27 @@ const App = () => {
             return toast("Open your eyes dude where are you clicking", {type : "warning"})
         }
         winner();
-        // i +=1;
-        // console.log(i);
-        // if (i>=9) {
-        //     return toast("Game is Draw. To paly Again click the Button", {type: "success"});
-        // }
     }
 
     return(
         <div>
+
+            <div className= "cboard">
+                <button className ="choice-btn" onClick={()=>setIsCross(isCross)}>Cross</button>
+                <button className ="choice-btn" onClick={()=>setIsCross(!isCross)}>Circle</button>
+                <button className ="submit-btn" onClick={()=>document.querySelector('.cboard').style.display ="none"}>OK</button>
+            </div>
+
             <ToastContainer position = "top-center"></ToastContainer>
             <section className="name">Tic Tac Array</section>
             <header>
                     {
                      winMessage? (
                         <div>
-                        <h1> 
-                        {winMessage}
-                        </h1>
-                        <button className="playa" onClick={playAgain}> Play Again</button>
+                            <h1 className ="win">
+                                {toast(winMessage, {type : "success"})}
+                            </h1>
+                            <button className="playa" onClick={playAgain}> Play Again</button>
                         </div>
                     ) : (
                         <h1>
