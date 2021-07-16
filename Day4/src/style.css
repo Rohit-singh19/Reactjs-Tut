@@ -35,6 +35,10 @@ background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, F
   align-items:center;
 } */
 
+.win{
+    color: green;
+}
+
 .name{
     font-size: 3rem;
     font-weight: 600;
@@ -62,7 +66,7 @@ header h1{
 
 .grid{
     width: 400px;
-    height: 400px;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     display: grid;
@@ -92,4 +96,34 @@ header h1{
     color: white;
     margin-bottom: 4rem;
     z-index: 1000;
+}
+
+.cboard{
+    width: 500px;
+    height: 600px;
+    background-color: blue;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+}
+
+.choice-btn{
+    padding: 1rem 2rem;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.submit-btn{
+    padding: 1rem 2rem;
+    margin: auto;
+    background-color: lightblue;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
 }
