@@ -67,8 +67,8 @@ const App = () => {
         <div>
 
             <div className= "cboard">
-                <button className ="choice-btn" onClick={()=>setIsCross(isCross)}>Cross</button>
-                <button className ="choice-btn" onClick={()=>setIsCross(!isCross)}>Circle</button>
+                <button className ="choice-btn" onClick={()=>setIsCross(true)}>Cross</button>
+                <button className ="choice-btn" onClick={()=>setIsCross(false)}>Circle</button>
                 <button className ="submit-btn" onClick={()=>document.querySelector('.cboard').style.display ="none"}>OK</button>
             </div>
 
